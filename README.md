@@ -57,3 +57,11 @@ python manage.py test apps
 sudo docker-compose exec backend sh
 pytest test.py
 ```
+
+### Prueba en postman
+
+![alt text](postman.png)
+
+### Ejemplo de ejecucion de servicios
+
+![alt text](servicios.png)
