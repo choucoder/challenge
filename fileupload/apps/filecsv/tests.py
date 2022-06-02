@@ -6,7 +6,7 @@ from rest_framework import status
 
 class FileCSVTest(TestCase):
     def setUp(self):
-        files = {'csvfile': open('postcodesgeo.csv', 'rb')}
+        files = {'csvfile': open('postcodesgeo_short.csv', 'rb')}
         response = requests.post(
             'http://localhost:8000/api/filecsv/upload/postcodesgeo',
             files=files)
@@ -14,7 +14,7 @@ class FileCSVTest(TestCase):
         assert response.status_code == status.HTTP_204_NO_CONTENT
 
     def test_upload_file(self):
-        files = {'csvfile': open('postcodesgeo.csv', 'rb')}
+        files = {'csvfile': open('postcodesgeo_short.csv', 'rb')}
         response = requests.post(
             'http://localhost:8000/api/filecsv/upload/postcodesgeo',
             files=files)

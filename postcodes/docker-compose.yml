@@ -7,4 +7,4 @@ services:
     command: "python consumer.py"
     volumes:
       - .:/app
-    network_mode: bridge
+    network_mode: host

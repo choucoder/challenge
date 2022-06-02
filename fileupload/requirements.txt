@@ -33,3 +33,4 @@ urllib3==1.26.9
 yarl==1.7.2
 mysqlclient
 django-mysql
+gunicorn

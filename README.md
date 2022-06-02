@@ -37,8 +37,6 @@ python manage.py migrate
 
 ```
 cd postcodes
-sudo ip addr show docker0
-colocar la ip de la interfaz docker0 en el archivo .env, y luego
 sudo docker-compose up
 ```
 
