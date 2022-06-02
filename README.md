@@ -4,6 +4,8 @@
 
 ![alt text](challenge.drawio.png)
 
+El servicio 2, se utilizo una arquitectura factory para el despliegue de Threds trabajadores que aceleran el proceso de consulta a la api poste y el envio de esta data hacia el endpoint del servicio 1. Se utilizo la combinacion de multithreading + asyncio para lograr una mayor velocidad de procesamiento de los archivos, esta fue escogida por el desempeno que tiene a la hora de realizar tareas de IO. Cada Thread en paralelo tarda 6 segundos en procesar 250 peticiones (obtencion del codigo postal + guardado de la data), lo que para un total de 1000 datos, el proceso tarda entre 6-7 segundos.
+
 ### Prerequisitos
 
 ```
