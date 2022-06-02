@@ -5,7 +5,7 @@ import requests
 from aiohttp import ClientSession
 from decouple import config
 
-from helpers import Manager
+from utils.helpers import Manager
 
 
 params = pika.URLParameters(

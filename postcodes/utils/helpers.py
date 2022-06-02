@@ -1,14 +1,7 @@
 import asyncio
-from fileinput import filename
 from multiprocessing import Process
-from threading import Thread
-import time
 
-import requests
-from aiohttp import ClientSession
-from decouple import config
-
-from workers import MainProcess
+from .workers import MainProcess
 
 
 class Manager(Process):
@@ -39,7 +32,7 @@ class Manager(Process):
 
     def run(self):
         filename = self.filename
-        print("filename for processing: ", filename)
+        print("[INFO] filename for processing: ", filename)
         coordinates = self.extract_coordinates(filename)
         mainProcess = MainProcess(coordinates, batch_size=100)
 
