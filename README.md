@@ -23,13 +23,14 @@ cd challenge
 ```
 cd fileupload
 sudo docker-compose up
+ctrl + c
+sudo docker-compose up
 ```
 
 ##### En otra terminal realizar migraciones para tablas de MYSQL
 
 ```
 sudo docker-compose exec backend sh
-python manage.py makemigrations
 python manage.py migrate
 ```
 
@@ -42,14 +43,15 @@ sudo docker-compose up
 
 ### Ejecutar pruebas
 
-#### Servicio 1
+#### Servicio 1 (debe estar corriendo el servicio)
 
 ```
+cd fileupload
 sudo docker-compose exec backend sh
 python manage.py test apps
 ```
 
-#### Servicio 2
+#### Servicio 2 (debe estar corriendo el servicio)
 
 ```
 sudo docker-compose exec backend sh
